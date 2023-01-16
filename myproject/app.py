@@ -30,7 +30,7 @@ def book():
     conn.commit()
     #if request.form.get("name"):
      #   return flash("registered seccessfully","success")
-    return url_for('home')
+    return render_template("index.html")
     
     
 
