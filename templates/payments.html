@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>payments</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='files/css/bootstrap.min.css')}}">
+   
+    <script src="{{url_for('static',filename='files/js/jquery.min.js')}}"></script>
+</head>
+<body>
+    <div style="margin:100px 0px 0px 300px">
+        <form action="/booking" method="post" autocomplete="off">
+        <div class="col-md-offset-3 col-md-4">
+            {% with messages = get_flashed_messages(with_categories=true)%}
+            {% if messages %}
+            {% for category,message in messages %}
+            <div class="alert alert-{{category}}">{{message}}</div>
+            {% endfor %}
+            {% endif%}
+            {% endwith %}
+            <h3 class="page-header text-primary">Booking</h3>
+        
+        
+        <div class="form-group">
+        <label>name</label>
+        <input type="text" name="name" class="form-control" required>
+        
+        
+        <label class="fs-1">age</label>
+        <input type="number" name="age" class="form-control" required>
+        <label>contact</label>
+        <input type="number" name="contact" class="form-control" required>
+        
+        
+        
+        <label>destination</label>
+        <input type="text" name="destination" class="form-control" required>
+        
+        <label>seats</label>
+        <input type="text" name="seats" class="form-control" required>
+        </div>
+        
+        
+        <input type="submit" value="submit" class="btn btn-success" name="success">
+        <input type="reset" value="reset" class="btn btn-danger">
+        <a href="/"><input type="button" value="Back" class="btn btn-info"></a>
+        
+        </div>
+        
+        
+        </div>
+        
+        <!--<a href="{{url_for('home')}}" class="form-control">NEXT</a>-->
+        
+        </form>
+        
+        
+        
+        </body>
+        
+        
+        
+        
+        
+        </html>
+</body>
+<script>
+$(document).ready(function(){
+    $('.alert').hide(3000);
+})
+
+
+</script>
+</html>
+

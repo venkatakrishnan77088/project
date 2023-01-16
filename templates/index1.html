@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>register</title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<body>
+    <div style="margin:100px 0px 0px 300px">
+<form action="/booking" method="post" autocomplete="off">
+<div class="col-md-offset-3 col-md-4">
+    {% with messages = get_flashed_messages(with_categories=true)%}
+    {% if messages %}
+    {% for category,message in messages %}
+    <div class="alert alert-{{category}}">{{message}}</div>
+    {% endfor %}
+    {% endif%}
+    {% endwith %}
+    <h3 class="page-header text-primary">Booking</h3>
+
+
+<div class="form-group">
+<label>name</label>
+<input type="text" name="name" class="form-control" placeholder="Enter the name" required>
+
+
+<label class="fs-1">age</label>
+<input type="number" name="age" class="form-control " placeholder="Enter the age" required>
+<label>contact</label>
+<input type="number" name="contact" class="form-control" placeholder="Enter the phone number" required>
+
+
+
+<label>destination</label>
+<input type="text" name="destination" class="form-control" placeholder="Enter the destination" required>
+
+<label>seats</label>
+<input type="text" name="seats" class="form-control" placeholder="Enter the seat count" required>
+</div>
+
+
+<input type="submit" value="submit" class="btn btn-success" name="success">
+<input type="reset" value="reset" class="btn btn-danger">
+<a href="/"><input type="button" value="Back" class="btn btn-info"></a>
+
+</div>
+
+
+</div>
+
+<!--<a href="{{url_for('home')}}" class="form-control">NEXT</a>-->
+
+</form>
+
+
+
+</body>
+
+
+
+
+
+</html>
