@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Login Form with light button  </title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="{{url_for('static',filename='files/css/pay.css')}}">
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="login-box">
+  <h2>Login</h2>
+  <form  action="/paylogin" methods="post">
+    <div class="user-box">
+      <input type="text" name="name" required="">
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input type="number" name="num" required="">
+      <label>contact</label>
+    </div>
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <input type="submit" value="submit">
+      <a href="#"><input type="reset" value="reset"></a>
+
+      <a href="/"><input type="button" value="Back" class="btn btn-info"></a>
+    </a>
+  </form>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
